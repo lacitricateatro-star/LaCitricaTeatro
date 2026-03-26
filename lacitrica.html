@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Cítrica Teatro · Valle del Lecrín · Granada</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--v:#2d4a1e;--vm:#4a7a2e;--li:#b8d96b;--lm:#e8f04a;--ti:#c4833a;--na:#d4722a;--cr:#f5edd8;--bl:#faf7f0;--os:#1a2810;--ne:#0d0d0d;}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{background:var(--bl);color:var(--os);font-family:'Cormorant Garamond',serif;overflow-x:hidden;cursor:none;}
+.cursor{width:10px;height:10px;background:var(--na);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9999;mix-blend-mode:multiply;}
+.ring{width:34px;height:34px;border:1.5px solid var(--v);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9998;transition:transform .3s ease,width .2s,height .2s,border-color .2s;}
+nav{position:fixed;top:0;width:100%;z-index:500;padding:1.4rem 3rem;display:flex;justify-content:space-between;align-items:center;transition:background .3s,border-bottom .3s;}
+nav.sc{background:rgba(250,247,240,.95);backdrop-filter:blur(10px);border-bottom:1px solid rgba(45,74,30,.1);}
+.nl{font-family:'Space Mono',monospace;font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--v);text-decoration:none;line-height:1.5;}
+ul.nl{display:flex;gap:2.5rem;list-style:none;}
+ul.nl a{font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--v);text-decoration:none;opacity:.65;transition:opacity .2s;}
+ul.nl a:hover{opacity:1;}
+#inicio{min-height:100vh;background:var(--ne);display:grid;grid-template-columns:1fr 1fr;position:relative;overflow:hidden;}
+.hl{display:flex;flex-direction:column;justify-content:flex-end;padding:8rem 4rem 5rem;z-index:2;}
+.hf{font-size:clamp(.85rem,1.1vw,1rem);font-style:italic;line-height:2;color:rgba(245,237,216,.42);max-width:420px;margin-bottom:2.5rem;}
+.hf span{color:var(--lm);font-style:normal;}
+h1{font-family:'Playfair Display',serif;font-size:clamp(4rem,7vw,8rem);line-height:.88;color:var(--cr);font-weight:900;letter-spacing:-.02em;}
+h1 em{display:block;font-style:italic;font-weight:400;color:var(--na);font-size:.6em;}
+.hs{margin-top:2.5rem;font-family:'Space Mono',monospace;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(245,237,216,.32);}
+.hcta{margin-top:3rem;display:inline-flex;align-items:center;gap:1rem;font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:var(--lm);text-decoration:none;border-bottom:1px solid rgba(232,240,74,.3);padding-bottom:.4rem;width:fit-content;transition:gap .3s;}
+.hcta:hover{gap:1.8rem;}
+.hr{position:relative;overflow:hidden;background:linear-gradient(135deg,#0d1a08,#1a2d10 50%,#0a0a05);display:flex;align-items:center;justify-content:center;}
+.hr::before{content:'';position:absolute;left:0;top:0;width:80px;height:100%;z-index:3;background:linear-gradient(to right,var(--ne),transparent);}
+.hsvg{opacity:.07;width:70%;}
+.hac{position:absolute;bottom:2.5rem;right:2.5rem;z-index:4;text-align:right;}
+.hac p{font-family:'Space Mono',monospace;font-size:.52rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(245,237,216,.25);line-height:1.9;}
+.hac p:first-child{color:rgba(245,237,216,.42);margin-bottom:.4rem;}
+.sl{width:1px;height:50px;background:linear-gradient(to bottom,rgba(232,240,74,.5),transparent);animation:pu 2s ease-in-out infinite;margin:0 auto;position:absolute;bottom:2rem;left:50%;}
+@keyframes pu{0%,100%{opacity:.3}50%{opacity:1}}
+section{padding:7rem 0;}
+.si{max-width:1200px;margin:0 auto;padding:0 3rem;}
+.sl2{font-family:'Space Mono',monospace;font-size:.58rem;letter-spacing:.25em;text-transform:uppercase;color:var(--ti);margin-bottom:.8rem;}
+h2,h3{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,4vw,3.8rem);line-height:1.05;color:var(--v);}
+/* NOSOTRAS */
+#nosotras{background:var(--v);position:relative;overflow:hidden;}
+#nosotras::before{content:'';position:absolute;top:-150px;right:-150px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(184,217,107,.07),transparent 65%);pointer-events:none;}
+.ng{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start;}
+.nl2 .sl2{color:var(--li);}
+.nl2 h2{color:var(--cr);font-style:italic;}
+.nt{color:rgba(245,237,216,.7);font-size:1.18rem;line-height:1.8;margin-top:2rem;}
+.nt p+p{margin-top:1rem;}
+.nc{margin-top:2rem;padding:1.5rem;border-left:2px solid rgba(232,240,74,.22);background:rgba(232,240,74,.03);}
+.nc p{font-size:1rem;font-style:italic;color:rgba(245,237,216,.48);line-height:1.7;}
+.ag{display:grid;grid-template-columns:1fr 1fr;gap:1rem;padding-top:1rem;}
+.ac{border-top:1px solid rgba(184,217,107,.16);padding:1.3rem 0;}
+.an{font-family:'Space Mono',monospace;font-size:.52rem;color:var(--li);opacity:.42;margin-bottom:.3rem;}
+.anom{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--cr);font-style:italic;}
+.aor{font-family:'Space Mono',monospace;font-size:.52rem;letter-spacing:.1em;text-transform:uppercase;color:var(--na);opacity:.78;margin-top:.2rem;}
+.bl2{margin-top:2.5rem;display:flex;flex-direction:column;gap:0;}
+.bi{display:grid;grid-template-columns:2rem 1fr;gap:1.2rem;padding:1.3rem 0;border-top:1px solid rgba(184,217,107,.1);}
+.bn{font-family:'Space Mono',monospace;font-size:.55rem;color:var(--li);opacity:.38;padding-top:.3rem;}
+.bt{font-size:1rem;color:rgba(245,237,216,.58);line-height:1.7;}
+.bt strong{color:rgba(245,237,216,.88);font-weight:400;}
+/* HORMONAS */
+#hormonas{background:var(--ne);padding:0;}
+.hi{display:grid;grid-template-columns:1fr 1fr;min-height:90vh;}
+.ho-l{background:var(--na);display:flex;flex-direction:column;justify-content:center;padding:6rem 4rem;position:relative;overflow:hidden;}
+.ho-l::before{content:'H';position:absolute;right:-1rem;bottom:-3rem;font-family:'Playfair Display',serif;font-size:22rem;line-height:1;font-weight:900;color:rgba(0,0,0,.1);pointer-events:none;}
+.hb{display:inline-block;font-family:'Space Mono',monospace;font-size:.52rem;letter-spacing:.2em;text-transform:uppercase;background:var(--ne);color:var(--na);padding:.4rem .9rem;margin-bottom:1.5rem;width:fit-content;}
+.hti{font-family:'Playfair Display',serif;font-size:clamp(4rem,6vw,7rem);line-height:.88;color:var(--ne);font-weight:900;position:relative;z-index:1;}
+.htag{margin-top:1.2rem;font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(0,0,0,.48);}
+.hch{margin-top:2.5rem;display:flex;flex-wrap:wrap;gap:.8rem;position:relative;z-index:1;}
+.ch{font-family:'Space Mono',monospace;font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(0,0,0,.62);border:1px solid rgba(0,0,0,.18);padding:.32rem .75rem;}
+.ho-r{padding:5rem 4rem;display:flex;flex-direction:column;justify-content:center;}
+.snl{font-family:'Space Mono',monospace;font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:var(--na);margin-bottom:1.5rem;}
+.snt{font-size:clamp(1.1rem,1.5vw,1.35rem);line-height:1.8;color:rgba(245,237,216,.7);font-style:italic;}
+.snt strong{color:var(--cr);font-style:normal;font-weight:400;}
+.fi{margin-top:3rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,.07);}
+.fil{font-family:'Space Mono',monospace;font-size:.52rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(245,237,216,.26);margin-bottom:1rem;}
+.fig{display:grid;grid-template-columns:1fr 1fr;gap:.7rem 2rem;}
+.fit{font-family:'Space Mono',monospace;font-size:.55rem;line-height:1.5;color:rgba(245,237,216,.36);}
+.fit span{color:rgba(245,237,216,.62);display:block;}
+/* CONV */
+#conv{background:#1b3612;padding:5rem 0;}
+.ci{max-width:1200px;margin:0 auto;padding:0 3rem;display:grid;grid-template-columns:1fr 2fr;gap:5rem;align-items:center;}
+.cl{font-family:'Space Mono',monospace;font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:var(--li);margin-bottom:1rem;}
+.ct{font-family:'Playfair Display',serif;font-size:2.6rem;color:var(--cr);font-style:italic;line-height:1.1;}
+.ctx{font-size:1.15rem;line-height:1.8;color:rgba(245,237,216,.6);}
+.ctx p+p{margin-top:1rem;}
+/* PROYECTOS */
+#proyectos{background:var(--bl);}
+.pg{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3.5rem;}
+.pc{padding:2.5rem;border:1px solid rgba(45,74,30,.1);transition:background .3s,transform .4s cubic-bezier(.25,.46,.45,.94);}
+.pc:hover{background:var(--v);transform:translateY(-5px);}
+.pc:hover .pt{color:var(--cr);}.pc:hover .pd{color:rgba(245,237,216,.58);}.pc:hover .ptg{color:var(--li);}.pc:hover .pi{border-color:rgba(184,217,107,.28);color:var(--li);}
+.pi{width:46px;height:46px;border:1px solid rgba(45,74,30,.15);display:flex;align-items:center;justify-content:center;font-size:1.2rem;margin-bottom:1.5rem;transition:all .3s;}
+.ptg{font-family:'Space Mono',monospace;font-size:.52rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ti);margin-bottom:.8rem;transition:color .3s;}
+.pt{font-family:'Playfair Display',serif;font-size:1.55rem;font-style:italic;color:var(--v);margin-bottom:.9rem;transition:color .3s;}
+.pd{font-size:.98rem;line-height:1.7;color:rgba(26,40,16,.56);transition:color .3s;}
+/* RESEÑAS */
+#resenas{background:var(--os);overflow:hidden;}
+#resenas .sl2{color:var(--na);}
+#resenas h2{color:var(--cr);}
+.prg{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:3.5rem;}
+.prc{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);padding:2.5rem;position:relative;}
+.prc::before{content:'"';font-family:'Playfair Display',serif;font-size:5rem;line-height:0;position:absolute;top:2.5rem;left:2rem;color:var(--na);opacity:.2;}
+.prt{font-size:1.1rem;line-height:1.78;color:rgba(245,237,216,.66);font-style:italic;padding-top:.8rem;}
+.pra{margin-top:1.4rem;font-family:'Space Mono',monospace;font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;color:var(--na);opacity:.78;}
+.pubg{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2.5rem;}
+.pubc{background:rgba(255,255,255,.02);border-top:2px solid var(--na);padding:1.8rem;}
+.pubt{font-size:.96rem;line-height:1.7;color:rgba(245,237,216,.56);font-style:italic;margin-bottom:1rem;}
+.pubo{font-family:'Space Mono',monospace;font-size:.5rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(245,237,216,.26);}
+/* AGENDA */
+#agenda{background:var(--ti);position:relative;overflow:hidden;}
+#agenda::after{content:'2026';position:absolute;right:-2rem;bottom:-4rem;font-family:'Playfair Display',serif;font-size:16rem;line-height:1;font-weight:900;color:rgba(255,255,255,.06);pointer-events:none;}
+#agenda .sl2{color:rgba(245,237,216,.55);}
+#agenda h2{color:var(--cr);}
+.fu{display:flex;flex-direction:column;gap:0;margin-top:3.5rem;}
+.fr{display:grid;grid-template-columns:90px 1fr auto;gap:2.5rem;align-items:center;padding:1.8rem 0;border-top:1px solid rgba(245,237,216,.1);cursor:pointer;transition:padding-left .3s;position:relative;}
+.fr:hover{padding-left:1rem;}.fr:hover .far{opacity:1;transform:translateX(0);}
+.fd{text-align:center;}
+.fdi{font-family:'Playfair Display',serif;font-size:2.7rem;line-height:1;color:var(--lm);}
+.fme{font-family:'Space Mono',monospace;font-size:.48rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(245,237,216,.4);}
+.fno{font-family:'Playfair Display',serif;font-size:1.28rem;font-style:italic;color:var(--cr);margin-bottom:.3rem;}
+.flu{font-family:'Space Mono',monospace;font-size:.52rem;letter-spacing:.08em;text-transform:uppercase;color:rgba(245,237,216,.4);}
+.fti{font-family:'Space Mono',monospace;font-size:.52rem;letter-spacing:.1em;text-transform:uppercase;color:var(--lm);border:1px solid rgba(232,240,74,.26);padding:.32rem .85rem;}
+.far{position:absolute;right:0;color:var(--lm);font-size:1.1rem;opacity:0;transform:translateX(-10px);transition:opacity .3s,transform .3s;}
+/* CONTACTO */
+#contacto{background:var(--bl);}
+.cog{display:grid;grid-template-columns:1fr 1.2fr;gap:6rem;align-items:start;}
+.coi{font-size:1.12rem;line-height:1.78;color:rgba(26,40,16,.56);margin-top:1.5rem;}
+.cod{margin-top:3rem;display:flex;flex-direction:column;gap:1.3rem;}
+.di{display:flex;gap:1.2rem;}
+.dico{color:var(--ti);min-width:1.1rem;padding-top:.15rem;}
+.dla{font-family:'Space Mono',monospace;font-size:.52rem;letter-spacing:.15em;text-transform:uppercase;color:var(--vm);margin-bottom:.22rem;}
+.dv{font-size:.98rem;color:var(--v);line-height:1.5;}
+.cf{background:var(--cr);border:1px solid rgba(45,74,30,.1);padding:3rem;}
+.cft{font-family:'Playfair Display',serif;font-size:1.55rem;font-style:italic;color:var(--v);margin-bottom:2rem;}
+.fg{margin-bottom:1.35rem;}
+.fla{display:block;font-family:'Space Mono',monospace;font-size:.5rem;letter-spacing:.2em;text-transform:uppercase;color:var(--vm);margin-bottom:.5rem;}
+.fi2,.fta,.fse{width:100%;background:var(--bl);border:1px solid rgba(45,74,30,.1);border-bottom:2px solid rgba(45,74,30,.24);padding:.9rem 1rem;font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--v);outline:none;appearance:none;transition:border-bottom-color .2s,background .2s;}
+.fi2:focus,.fta:focus,.fse:focus{border-bottom-color:var(--v);background:#fff;}
+.fta{height:115px;resize:none;}
+.fb{width:100%;background:var(--v);color:var(--lm);border:none;padding:1.1rem;font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;cursor:none;margin-top:.5rem;transition:background .3s,letter-spacing .3s;}
+.fb:hover{background:var(--os);letter-spacing:.3em;}
+/* FOOTER */
+footer{background:var(--ne);padding:4rem 3rem 2rem;}
+.foi{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:4rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,.05);}
+.flo{font-family:'Playfair Display',serif;font-size:1.75rem;font-style:italic;color:var(--cr);margin-bottom:1rem;}
+.flo span{color:var(--na);}
+.fb2 p{font-size:.9rem;line-height:1.7;color:rgba(245,237,216,.3);max-width:260px;}
+.fco h4{font-family:'Space Mono',monospace;font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:var(--na);margin-bottom:1.2rem;}
+.fli{list-style:none;display:flex;flex-direction:column;gap:.65rem;}
+.fli a{font-size:.93rem;color:rgba(245,237,216,.36);text-decoration:none;transition:color .2s;}
+.fli a:hover{color:var(--cr);}
+.fbo{max-width:1200px;margin:0 auto;padding-top:2rem;display:flex;justify-content:space-between;align-items:center;}
+.fcp{font-family:'Space Mono',monospace;font-size:.5rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,237,216,.16);}
+.fac{font-family:'Playfair Display',serif;font-size:.9rem;font-style:italic;color:rgba(212,114,42,.36);}
+/* REVEAL */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease;}
+.rv.vi{opacity:1;transform:translateY(0);}
+.d1{transition-delay:.1s}.d2{transition-delay:.22s}.d3{transition-delay:.36s}
+@media(max-width:960px){
+#inicio{grid-template-columns:1fr;}.hr{display:none;}.hl{min-height:100vh;padding:7rem 2rem 5rem;}
+.ng,.hi,.cog,.foi,.ci{grid-template-columns:1fr;gap:3rem;}
+.pg,.prg,.pubg{grid-template-columns:1fr;}
+.si{padding:0 1.5rem;}
+nav{padding:1rem 1.5rem;}
+ul.nl{display:none;}
+}
+</style>
+</head>
+<body>
+<div class="cursor" id="cur"></div>
+<div class="ring" id="ring"></div>
+
+<nav id="nav">
+  <a href="#inicio" class="nl">La Cítrica<br>Teatro</a>
+  <ul class="nl">
+    <li><a href="#nosotras">Nosotras</a></li>
+    <li><a href="#hormonas">Hormonas</a></li>
+    <li><a href="#proyectos">Proyectos</a></li>
+    <li><a href="#resenas">Reseñas</a></li>
+    <li><a href="#agenda">Agenda</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+</nav>
+
+<section id="inicio">
+  <div class="hl">
+    <p class="hf">A veces dulces y sabrosas como una naranja<br>A veces al límite como un pomelo<br>Otras frescas como una mandarina<br>De vez en cuando amargas como un Kumquat<br>Pero siempre, <span>SIEMPRE, ácidas.</span></p>
+    <h1>La Cítrica<br><em>Teatro</em></h1>
+    <p class="hs">▲ Arte · Ecofeminismo · Valle del Lecrín · Granada</p>
+    <a href="#hormonas" class="hcta">Ver Hormonas →</a>
+  </div>
+  <div class="hr">
+    <svg class="hsvg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="100" cy="100" r="95" fill="none" stroke="white" stroke-width="2"/>
+      <line x1="100" y1="5" x2="100" y2="195" stroke="white" stroke-width="1.5"/>
+      <line x1="5" y1="100" x2="195" y2="100" stroke="white" stroke-width="1.5"/>
+      <line x1="32" y1="32" x2="168" y2="168" stroke="white" stroke-width="1"/>
+      <line x1="168" y1="32" x2="32" y2="168" stroke="white" stroke-width="1"/>
+      <circle cx="100" cy="100" r="18" fill="white" opacity="0.25"/>
+    </svg>
+    <div class="hac">
+      <p>Actrices</p>
+      <p>Chiara Sanzillo</p>
+      <p>Sara Zironi</p>
+      <p>Beatriz Arias García</p>
+      <p>Alicia Conde Fernández</p>
+    </div>
+  </div>
+  <div class="sl"></div>
+</section>
+
+<section id="nosotras">
+  <div class="si">
+    <div class="ng">
+      <div class="nl2 rv">
+        <p class="sl2">Quiénes somos</p>
+        <h2>Sobre<br>nosotras</h2>
+        <div class="nt">
+          <p>La Cítrica Teatro nace de la necesidad de unión de cuatro mujeres artistas que viven en el medio rural y desean dejar un mundo más amable a sus hij@s y a la comunidad en general.</p>
+          <p>Las integrantes tienen formación y una larga trayectoria profesional en Arte Dramático, danza, música, yoga y expresión corporal.</p>
+          <p>También en el campo de lo social han trabajado con mujeres con discapacidad, mujeres con enfermedad mental, mujeres víctimas de violencia de género, trata y mujeres refugiadas.</p>
+          <p>De la unión de ambos mundos —lo social y lo artístico, indivisibles para nosotras— nace nuestra obra.</p>
+        </div>
+        <div class="nc"><p>Cuatro actrices de cuatro partes del mundo —Alemania, Italia, León y Granada— que se encuentran en el Valle de Lecrín. Sus bases: el arte, el teatro, el ecofeminismo, la preservación de los valores comunitarios y la crítica social.</p></div>
+      </div>
+      <div class="rv d2">
+        <div class="ag">
+          <div class="ac"><p class="an">01</p><p class="anom">Chiara Sanzillo</p><p class="aor">Alemania</p></div>
+          <div class="ac"><p class="an">02</p><p class="anom">Sara Zironi</p><p class="aor">Italia</p></div>
+          <div class="ac"><p class="an">03</p><p class="anom">Beatriz Arias García</p><p class="aor">Granada</p></div>
+          <div class="ac"><p class="an">04</p><p class="anom">Alicia Conde Fernández</p><p class="aor">León</p></div>
+        </div>
+        <div class="bl2">
+          <div class="bi"><span class="bn">A</span><p class="bt"><strong>Creación e investigación</strong> en el ámbito teatral y artes escénicas de temáticas sociales y medioambientales.</p></div>
+          <div class="bi"><span class="bn">B</span><p class="bt"><strong>Crecimiento personal y relaciones socio-afectivas</strong> solidarias e igualitarias a través del teatro, el movimiento y la danza.</p></div>
+          <div class="bi"><span class="bn">C</span><p class="bt"><strong>Revitalizar la cultura rural,</strong> fomentar el desarrollo social, proteger el patrimonio y servir de foro de encuentro.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="hormonas">
+  <div class="hi">
+    <div class="ho-l rv">
+      <span class="hb">★ En gira nacional</span>
+      <h2 class="hti">HORMO<br>NAS</h2>
+      <p class="htag">Viaje en cinco actos y un conversatorio</p>
+      <div class="hch">
+        <span class="ch">🎭 Teatro · Danza</span>
+        <span class="ch">~60 min</span>
+        <span class="ch">+ Conversatorio</span>
+        <span class="ch">Creación colectiva</span>
+      </div>
+    </div>
+    <div class="ho-r rv d2">
+      <p class="snl">Sinopsis</p>
+      <p class="snt"><strong>HORMONAS recorre el ciclo de vida de una mujer, de las mujeres. Desde que nacemos hasta que morimos.</strong><br><br>Un recorrido en clave cítrica: teatro, danza, humor y cruda realidad se mezclan para viajar hacia lo esencial. A lo largo de este viaje transitaremos por diferentes experiencias vitales atravesadas por las normas, creencias y violencias tanto estructurales como las de género.<br><br>Estereotipos de género en edades tempranas, bullying escolar, violencia obstétrica, violencia de género mortal, síntomas y tabúes en la menopausia, la soledad de las mujeres en la vejez...<br><br>El medio de transporte es el teatro y la danza, el cuerpo expresivo, el movimiento poético y la más pura interpretación.</p>
+      <div class="fi">
+        <p class="fil">Ficha técnica</p>
+        <div class="fig">
+          <div class="fit">Actrices<span>Chiara Sanzillo · Sara Zironi · Beatriz Arias · Alicia Conde</span></div>
+          <div class="fit">Dirección y creación<span>La Cítrica Teatro</span></div>
+          <div class="fit">Dramaturgia<span>La Cítrica Teatro</span></div>
+          <div class="fit">Escenografía<span>La Cítrica Teatro</span></div>
+          <div class="fit">Vestuario<span>La Cítrica Teatro</span></div>
+          <div class="fit">Espacio sonoro<span>La Cítrica Teatro</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="conv">
+  <div class="ci">
+    <div class="rv"><p class="cl">Tras el espectáculo</p><h3 class="ct">Conver<br>satorio</h3></div>
+    <div class="ctx rv d2">
+      <p>Una vez terminado el espectáculo se propone —libremente al público que desee quedarse— un conversatorio con las actrices, guionistas y directoras de HORMONAS.</p>
+      <p>Éste es un espacio para expresar, compartir y reflexionar en colectividad. El conversatorio es guiado con algunas herramientas del teatro de las oprimidas.</p>
+    </div>
+  </div>
+</section>
+
+<section id="proyectos">
+  <div class="si">
+    <div class="rv"><p class="sl2">Nuestros proyectos</p><h2>Más allá<br>de Hormonas</h2></div>
+    <div class="pg">
+      <div class="pc rv d1"><div class="pi">🎭</div><p class="ptg">Obra principal · En gira</p><h3 class="pt">Hormonas</h3><p class="pd">Nuestra pieza base, donde la innovación y el romper los tabúes están muy presentes. Creación colectiva que recorre el ciclo vital femenino a través del teatro y la danza.</p></div>
+      <div class="pc rv d2"><div class="pi">🌱</div><p class="ptg">Teatro foro · Adolescentes</p><h3 class="pt">Un día cualquiera</h3><p class="pd">Pieza dirigida a jóvenes. Amor romántico, violencias de género en relaciones afectivas adolescentes, estereotipos de belleza, orientaciones sexuales y presión del grupo de iguales.</p></div>
+      <div class="pc rv d3"><div class="pi">✊</div><p class="ptg">Activismo artístico</p><h3 class="pt">Artivismo</h3><p class="pd">Desde el compromiso con el momento político que vivimos, llevamos a cabo varios art-ivismos. Es la manera en que nos sentimos más cómodas para expresar lo que sentimos.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="resenas">
+  <div class="si">
+    <div class="rv"><p class="sl2">Lo que dicen</p><h2>Reseñas</h2></div>
+    <div class="prg">
+      <div class="prc rv d1"><p class="prt">En su primer montaje, 'Hormonas' usó el bisturí para sajar las heridas sociales infligidas a la mitad de la población desde el nacimiento hasta la vejez. Cuatro actrices con cuatro sillas y dos focos. El montaje despierta risas y pellizcos de amargura.</p><p class="pra">Alexia Salas · Diario La Verdad</p></div>
+      <div class="prc rv d2"><p class="prt">Hormonas se disfruta tanto como se sufre. Porque es imposible salir del teatro igual que como se entró. Es un tremendo gesto de sororidad y amor. Uno que te hace querer llevar a todas las mujeres de tu vida a ese patio de butacas.</p><p class="pra">Grecia Mallora · Zentralita</p></div>
+    </div>
+    <div class="pubg">
+      <div class="pubc rv d1"><p class="pubt">"Cómo en una hora pasasteis por todas las etapas de la mujer de una forma tan concisa y elegante. La idea es maravillosa y real como la vida misma."</p><p class="pubo">San Pedro del Pinatar · Nov. 2024</p></div>
+      <div class="pubc rv d2"><p class="pubt">"Maravillosa interpretación, actrices brutales y puesta en escena cuidada y perfecta. Son absolutamente necesarias."</p><p class="pubo">Padul, Granada · Nov. 2024</p></div>
+      <div class="pubc rv d3"><p class="pubt">"Una de las mejores obras de teatro de los últimos tiempos dentro de las actividades del 8M."</p><p class="pubo">Paki Ruiz · Salobreña · Mar. 2025</p></div>
+      <div class="pubc rv d1"><p class="pubt">"El final me dejó rumiando sobre mi adultez mayor y cómo quiero vivirla. Gracias por conmover corazones."</p><p class="pubo">Cynthia · Granada · Mayo 2025</p></div>
+      <div class="pubc rv d2"><p class="pubt">"Está tan bien construida de principio a fin, mezclando momentos cómicos con situaciones de gravedad que tanto me conmocionaron."</p><p class="pubo">Rosa · Granada · Mayo 2025</p></div>
+      <div class="pubc rv d3"><p class="pubt">"HORMONAS, una pieza que impacta, confronta e interpela. Un viaje por nuestros ciclos reproductivos. Brutales."</p><p class="pubo">San Pedro del Pinatar · Nov. 2024</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="agenda">
+  <div class="si">
+    <div class="rv"><p class="sl2">Hormonas en gira · 2026</p><h2>Próximas<br>funciones</h2></div>
+    <div class="fu">
+      <div class="fr rv"><div class="fd"><div class="fdi">15</div><div class="fme">Ene 2026</div></div><div><p class="fno">Hormonas en Málaga</p><p class="flu">📍 Contenedor Cultural UMA · Bulevar Louis Pasteur, 23 · Málaga</p></div><span class="fti">Espectáculo</span><span class="far">→</span></div>
+      <div class="fr rv d1"><div class="fd"><div class="fdi">06</div><div class="fme">Mar 2026</div></div><div><p class="fno">Hormonas en Bullas</p><p class="flu">📍 Casa de la Cultura · Pl. de España, 12 · Bullas, Murcia</p></div><span class="fti">Espectáculo</span><span class="far">→</span></div>
+      <div class="fr rv d2"><div class="fd"><div class="fdi">20</div><div class="fme">Mar 2026</div></div><div><p class="fno">Hormonas en La Puebla de Cazalla</p><p class="flu">📍 Bodega Antonio Fuentes · La Puebla de Cazalla, Sevilla</p></div><span class="fti">Espectáculo</span><span class="far">→</span></div>
+      <div class="fr rv d3"><div class="fd"><div class="fdi">10</div><div class="fme">Abr 2026</div></div><div><p class="fno">Hormonas en Granada</p><p class="flu">📍 Teatro Isidoro Olgoso Zaidín · C. Pintor Manuel Maldonado · Granada</p></div><span class="fti">Espectáculo</span><span class="far">→</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="contacto">
+  <div class="si">
+    <div class="cog">
+      <div class="rv">
+        <p class="sl2">Escríbenos</p>
+        <h2>Contacto<br>y distribución</h2>
+        <p class="coi">¿Quieres traer <em>Hormonas</em> a tu espacio? ¿Colaborar? ¿Unirte a la asociación? Nos alegra escucharte.</p>
+        <div class="cod">
+          <div class="di"><span class="dico">◉</span><div><p class="dla">Email</p><p class="dv">lacitricateatro@gmail.com</p></div></div>
+          <div class="di"><span class="dico">◉</span><div><p class="dla">Beatriz (distribución)</p><p class="dv">618 933 927</p></div></div>
+          <div class="di"><span class="dico">◉</span><div><p class="dla">Alicia (distribución)</p><p class="dv">657 366 643</p></div></div>
+          <div class="di"><span class="dico">◉</span><div><p class="dla">Instagram</p><p class="dv">@lacitricateatro</p></div></div>
+          <div class="di"><span class="dico">◉</span><div><p class="dla">Entradas</p><p class="dv">entradium.com</p></div></div>
+        </div>
+      </div>
+      <div class="cf rv d2">
+        <p class="cft">Mándanos un mensaje</p>
+        <form onsubmit="hs(event)">
+          <div class="fg"><label class="fla">Tu nombre</label><input type="text" class="fi2" placeholder="Cómo te llamas"></div>
+          <div class="fg"><label class="fla">Correo electrónico</label><input type="email" class="fi2" placeholder="tu@correo.com"></div>
+          <div class="fg"><label class="fla">¿Sobre qué nos escribes?</label>
+            <select class="fse">
+              <option value="">Selecciona una opción</option>
+              <option>Contratar Hormonas</option>
+              <option>Contratar Un día cualquiera</option>
+              <option>Artivismo / Colaboración</option>
+              <option>Talleres y formación</option>
+              <option>Prensa / Medios</option>
+              <option>Unirme a la asociación</option>
+              <option>Otra consulta</option>
+            </select>
+          </div>
+          <div class="fg"><label class="fla">Tu mensaje</label><textarea class="fta" placeholder="Cuéntanos…"></textarea></div>
+          <button type="submit" class="fb">Enviar mensaje →</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foi">
+    <div class="fb2"><p class="flo">La <span>Cítrica</span> Teatro</p><p>Asociación Cultural de Mujeres Rurales Artistas del Valle del Lecrín. Arte, ecofeminismo y comunidad desde el sur de Granada.</p></div>
+    <div class="fco"><h4>Secciones</h4><ul class="fli"><li><a href="#nosotras">Quiénes somos</a></li><li><a href="#hormonas">Hormonas</a></li><li><a href="#proyectos">Proyectos</a></li><li><a href="#resenas">Reseñas</a></li><li><a href="#agenda">Agenda 2026</a></li><li><a href="#contacto">Contacto</a></li></ul></div>
+    <div class="fco"><h4>Contacto</h4><ul class="fli"><li><a href="mailto:lacitricateatro@gmail.com">lacitricateatro@gmail.com</a></li><li><a href="#">@lacitricateatro</a></li><li><a href="#">618 933 927 · Beatriz</a></li><li><a href="#">657 366 643 · Alicia</a></li><li><a href="#">entradium.com</a></li></ul></div>
+  </div>
+  <div class="fbo"><p class="fcp">© 2026 · La Cítrica Teatro · Valle del Lecrín · Granada</p><p class="fac">Siempre, SIEMPRE, ácidas 🍋</p></div>
+</footer>
+
+<script>
+const c=document.getElementById('cur'),r=document.getElementById('ring');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;c.style.transform=`translate(${mx-5}px,${my-5}px)`;});
+(function a(){rx+=(mx-rx)*.1;ry+=(my-ry)*.1;r.style.transform=`translate(${rx-17}px,${ry-17}px)`;requestAnimationFrame(a);})();
+document.querySelectorAll('a,button,.pc,.fr').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{r.style.width='50px';r.style.height='50px';r.style.borderColor='var(--na)';});
+  el.addEventListener('mouseleave',()=>{r.style.width='34px';r.style.height='34px';r.style.borderColor='var(--v)';});
+});
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('sc',window.scrollY>80));
+const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('vi');}),{threshold:.08});
+document.querySelectorAll('.rv').forEach(x=>obs.observe(x));
+function hs(e){e.preventDefault();const b=e.target.querySelector('.fb');b.textContent='✓ Enviado — Gracias';b.style.background='var(--vm)';setTimeout(()=>{b.textContent='Enviar mensaje →';b.style.background='';},3500);}
+</script>
+</body>
+</html>
